@@ -1,4 +1,17 @@
 var modle=(function(){//私有作用域
+//添加按钮
+var oUl=document.getElementsByTagName('ul')[0];
+var oBtn1=document.createElement('span');
+var oBtn2=document.createElement('span');
+var oImg1=document.createElement('img');
+var oImg2=document.createElement('img');
+oImg1.src='img/left.png';
+oImg2.src='img/right.png';
+oImg1.className='img';
+oImg2.className='img';
+oBtn1.className='btn';
+oBtn2.className='btn';
+var arr=[];//存图片的各项属性
 function getStyle(obj,attr){
 	if(obj.currentStyle){
 		return obj.currentStyle[attr];
@@ -26,19 +39,6 @@ var oLi=document.getElementsByTagName('li');
 var middle=oLi[middleIndex];
 middle.style.height=showHeight+'px';
 middle.style.left=0.5*outBox.offsetWidth-0.5*singleWidth+'px';
-//添加按钮
-var oUl=document.getElementsByTagName('ul')[0];
-var oBtn1=document.createElement('span');
-var oBtn2=document.createElement('span');
-var oImg1=document.createElement('img');
-var oImg2=document.createElement('img');
-
-oImg1.src='img/left.png';
-oImg2.src='img/right.png';
-oImg1.className='img';
-oImg2.className='img';
-oBtn1.className='btn';
-oBtn2.className='btn';
 
 oBtn1.style.left=middle.offsetLeft+'px';
 oBtn2.style.left=middle.offsetLeft+singleWidth-60+'px';
@@ -86,7 +86,6 @@ var speedY=(outBox.offsetHeight-200)*0.5/middleIndex;//图片最矮为200px
 })();
 //图片轮播效果
 //对于非行间样式 用style不能获得？opacity在单独写的时候可以获取到，但是在这里用函数获取不到，而用的是style.opacity
-var arr=[];//存图片的各项属性
 (function(){
 		for(var i=0;i<num;i++){
 		console.log(getStyle(oLi[i],'opacity'),i);
