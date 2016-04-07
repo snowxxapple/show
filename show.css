@@ -1,0 +1,40 @@
+*{
+	padding: 0px;
+	margin:0px;
+}
+ul{
+	list-style: none;
+	position: relative;
+	top: 30px;
+
+}
+li{
+display: inline-block;
+box-sizing: border-box;
+position: absolute;
+transition: all 1s ease;
+-webkit-transition: all 1s ease;
+-moz-transition:all 1s ease;
+-o-transition:all 1s ease;
+width: 20px;
+}
+.btn{
+	display: block;
+	width: 60px;
+	height: 40px;
+	z-index: 100;
+	background: rgba(10, 10, 10, 0.22);
+	position: absolute;
+	text-align: center;
+	transition: all 0.2s;
+}
+.btn:hover{
+	background: rgba(10,10,10,0.5);
+}
+.img{
+	margin-top: 4px;/*用行高就能解决的问题不知道为什么今天不行了*/
+}
+.inner{
+	width: 100%;
+	height: 100%;
+}
